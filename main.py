@@ -2,10 +2,9 @@ from reader.reader import DataClass
 from printer.data_printer import data_printer
 from data_for_pandas.data_for_pandas import get_data_frame
 from statics.statics import StaticsClass
-import pandas as pd
+
 
 if __name__ == '__main__':
-
     path = "file_for_reading/"
     file_name = path + "data.dat"
 
@@ -19,5 +18,5 @@ if __name__ == '__main__':
 
     pearson_matrix, spearman_matrix, kendall_matrix = statics.get_correlation_matrices()
 
-    print(pearson_matrix, spearman_matrix, kendall_matrix)
-
+    statics.heatmap_graphics()
+    statics.scatter_matrix_graphics()

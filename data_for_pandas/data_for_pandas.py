@@ -10,8 +10,8 @@ def get_data_frame(data):
     metric_6 = pd.Series(data[5][:])
 
     return pd.DataFrame({'real_dt': metric_1,
-                         'euclidean_dt': metric_2,
-                         'bending_energy': metric_3,
-                         'crossings': metric_4,
+                         'euc_dt': metric_2,
+                         'b_energy': metric_3,
+                         'cross': metric_4,
                          'real_ldi': metric_5,
-                         'euclidian_ldi': metric_6})
+                         'euc_ldi': metric_6})
