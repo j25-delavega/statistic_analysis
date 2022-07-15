@@ -56,9 +56,9 @@ class DataClass(object):
 
     def get_data_to_analyze(self):
         data = []
-        for i in range(0, len(self.metric_values)):
+        for j in range(0, self.number_of_metrics):
             values = []
-            for j in range(0, self.number_of_metrics):
+            for i in range(0, len(self.metric_values)):
                 value = abs(self.metric_values[i][j] - self.best_values[j]) / abs(
                     self.worst_values[j] - self.best_values[j])
                 values.append(value)
